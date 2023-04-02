@@ -42,12 +42,12 @@ contract YourCollectible is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable 
     return super.tokenURI(tokenId);
   }
 
-  function mintItem(address to, string memory tokenURI) public returns (uint256) {
+  function mintItem(address to, string memory newTokenURI) public returns (uint256) {
     _tokenIds.increment();
 
     uint256 id = _tokenIds.current();
     _mint(to, id);
-    _setTokenURI(id, tokenURI);
+    _setTokenURI(id, newTokenURI);
 
     return id;
   }
