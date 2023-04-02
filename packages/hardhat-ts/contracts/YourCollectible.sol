@@ -16,7 +16,7 @@ contract YourCollectible is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable 
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  constructor() public ERC721('YourCollectible', 'YCB') {}
+  constructor() ERC721('YourCollectible', 'YCB') {}
 
   function _baseURI() internal view virtual override returns (string memory) {
     return 'https://ipfs.io/ipfs/';
