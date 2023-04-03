@@ -48,7 +48,8 @@ build
 #Hardhat files
 cache
 artifacts
-
+mnemonic.secret
+packages/hardhat-ts/*.txt
 # misc
 .DS_Store
 .env*
